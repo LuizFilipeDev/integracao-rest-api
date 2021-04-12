@@ -1,0 +1,27 @@
+#clientes-cadastrados, #botoes{
+    background-color: white;
+}
+body {
+    background-color: #5D5D5D;
+}
+.container {
+    background-color: #DEDEDE;
+}
+.botao{
+    color: black;
+    background: linear-gradient(to bottom, white 0%, #dcdcdc 100%);
+    margin-left: 10px;
+}
+.botao:hover{
+    color: black;
+    background: linear-gradient(to top, white 0%, #dcdcdc 100%);
+    margin-left: 10px;
+}
+#titulo-tabela h4{
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+#titulo-tabela{
+    border-bottom: 1px solid gray;
+  
+}

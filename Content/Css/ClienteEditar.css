@@ -1,0 +1,36 @@
+#clientes-cadastrados, #botoes{
+    background-color: white;
+}
+body {
+    background-color: #5D5D5D;
+}
+.container {
+    background-color: #DEDEDE;
+}
+.botao, #btnModal {
+    color: black;
+    background: linear-gradient(to bottom, white 0%, #dcdcdc 100%);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.botao:hover, #btnModal:hover{
+    color: black;
+    background: linear-gradient(to top, white 0%, #dcdcdc 100%);
+    margin-left: 10px;
+}
+#titulo-tabela{
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+#titulo-tabela{
+    border-bottom: 1px solid gray;
+  
+}
+#grupoId, #grupoNome, #grupoEmail, #grupoTelefone {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.error input, .error label{
+    color:red;
+    border-color:red;
+}
