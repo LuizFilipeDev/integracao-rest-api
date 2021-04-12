@@ -18,7 +18,7 @@ $(document).ready(function(){
                     "lengthMenu": "Mostrando _MENU_ registros por pagina",
                     "zeroRecords": "Nenhum registro encontrado",
                     "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                    "infoEmpty": "Nenhum registro disponível",
+                    "infoEmpty": "Nenhum registro disponivel",
                     "infoFiltered": "(Filtrado de _MAX_ dos numeros totais de registros)",
                     "loadingRecords": "Carregando...",
                     "processing": "Processando...",
