@@ -34,7 +34,7 @@ namespace ProjetoIntegracao.Models
                 clienteString = JsonConvert.SerializeObject(Retorno);
 
                 //Alterar caminho para o "Banco de Dados" em txt
-                currentCliente = File.ReadAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt");
+                currentCliente = File.ReadAllText("caminho do txt na sua maquina");
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(currentCliente);
 
@@ -44,7 +44,7 @@ namespace ProjetoIntegracao.Models
                     string clientesAtualizados = currentCliente + clienteString + "]";
 
                     //Alterar caminho para o "Banco de Dados" em txt
-                    File.WriteAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt", clientesAtualizados);
+                    File.WriteAllText("caminho do txt na sua maquina", clientesAtualizados);
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace ProjetoIntegracao.Models
                     string clientesAtualizados = formatarJsonCol + "," + clienteString + "]";
 
                     //Alterar caminho para o "Banco de Dados" em txt
-                    File.WriteAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt", clientesAtualizados);
+                    File.WriteAllText("caminho do txt na sua maquina", clientesAtualizados);
                 }
                 cliente = JsonConvert.DeserializeObject<Cliente.Retorno>(clienteString);
             }
@@ -71,7 +71,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesString = File.ReadAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt");
+                clientesString = File.ReadAllText("caminho do txt na sua maquina");
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesString);
 
@@ -100,7 +100,7 @@ namespace ProjetoIntegracao.Models
             string clientesString = string.Empty;
             List<Cliente.Retorno> listaClientes = new List<Cliente.Retorno>();
 
-            clientesString = File.ReadAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt");
+            clientesString = File.ReadAllText("caminho do txt na sua maquina");
 
             listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesString);
 
@@ -114,7 +114,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesJson = File.ReadAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt");
+                clientesJson = File.ReadAllText("caminho do txt na sua maquina");
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesJson);
 
@@ -124,7 +124,7 @@ namespace ProjetoIntegracao.Models
 
                 listaClientesString = JsonConvert.SerializeObject(listaClientes);
 
-                File.WriteAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt", listaClientesString);
+                File.WriteAllText("caminho do txt na sua maquina", listaClientesString);
             }
             catch (Exception e)
             {
@@ -142,7 +142,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesJson = File.ReadAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt");
+                clientesJson = File.ReadAllText("caminho do txt na sua maquina");
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesJson);
 
@@ -152,11 +152,11 @@ namespace ProjetoIntegracao.Models
 
                 if (listaClientes.Count == 0)
                 {
-                    File.WriteAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt", "");
+                    File.WriteAllText("caminho do txt na sua maquina", "");
                 }
                 else
                 {
-                    File.WriteAllText("C:/Users/luiz.soares/Documents/VSEstudo/ESTUDO/bd/clientes.txt", listaClientesString);
+                    File.WriteAllText("caminho do txt na sua maquina", listaClientesString);
                 }
             }
             catch (Exception e)
