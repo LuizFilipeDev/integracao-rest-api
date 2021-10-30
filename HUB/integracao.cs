@@ -11,12 +11,14 @@ namespace ProjetoIntegracao.HUB
     public class integracao
     {
         //Alterar endpoints antes de utilizar a aplicação.
+        //Alterar ENDPOINT de acordo com o endpoint gerado no site: "https://crudcrud.com". 
+
+        private const string ENDPOINT = "67fb4910a67f414d9603fa8fbc9c3b43"; 
         public static Cliente.Retorno GetCliente(string identificador)
         {
             Cliente.Retorno cliente = new Cliente.Retorno();
-            string endpoint = "Cole seu endpoint aqui"; //Alterar endpoint de acordo com o seu no site: "https://crudcrud.com".
 
-            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{endpoint}/Clientes/{identificador}") as HttpWebRequest;
+            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{ENDPOINT}/Clientes/{identificador}") as HttpWebRequest;
 
             requisicao.Method = "GET";
             requisicao.ContentType = "application/json";
@@ -44,12 +46,11 @@ namespace ProjetoIntegracao.HUB
         public static string PostCliente(Cliente.Envio Cliente){
 
             Models.Cliente.Retorno clienteRetorno = new Cliente.Retorno();
-            string endpoint = "Cole seu endpoint aqui"; //Alterar endpoint de acordo com o seu no site: "https://crudcrud.com".
             string cliente = JsonConvert.SerializeObject(Cliente);
             byte[] byteArray = Encoding.UTF8.GetBytes(cliente);
             string servidorCliente = string.Empty;
 
-            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{endpoint}/Clientes") as HttpWebRequest;
+            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{ENDPOINT}/Clientes") as HttpWebRequest;
 
             requisicao.Method = "POST";
 
@@ -88,12 +89,11 @@ namespace ProjetoIntegracao.HUB
         }
         public static void PutCliente(Cliente.Envio Cliente, string identificador){
 
-            string endpoint = "Cole seu endpoint aqui"; //Alterar endpoint de acordo com o seu no site: "https://crudcrud.com".
             string cliente = JsonConvert.SerializeObject(Cliente);
             byte[] byteArray = Encoding.UTF8.GetBytes(cliente);
             Models.Cliente.Retorno servidorCliente = new Cliente.Retorno();
 
-            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{endpoint}/Clientes/{identificador}") as HttpWebRequest;
+            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{ENDPOINT}/Clientes/{identificador}") as HttpWebRequest;
 
             requisicao.Method = "PUT";
             requisicao.ContentType = "application/json";
@@ -118,9 +118,7 @@ namespace ProjetoIntegracao.HUB
         }
         public static string DeleteCliente(string identificador){
 
-            string endpoint = "Cole seu endpoint aqui"; //Alterar endpoint de acordo com o seu no site: "https://crudcrud.com".
-
-            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{endpoint}/Clientes/{identificador}") as HttpWebRequest;
+            HttpWebRequest requisicao = WebRequest.Create($"https://crudcrud.com/api/{ENDPOINT}/Clientes/{identificador}") as HttpWebRequest;
 
             requisicao.Method = "DELETE";
 

@@ -38,7 +38,7 @@ $(document).ready(function(){
                     { data: 'Telefone' },
                     { data: '_id',
                       render: function (data) {
-                          return "<a href='" + url + "/Cliente/ClienteEditar/" + data + "' target=\"+_blank\">Ver</a></td>";
+                          return "<a href='" + url + "/Cliente/ClienteEditar/" + data + "' target=\"+_blank\">Editar</a></td>";
                     }}
                 ]
             });

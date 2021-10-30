@@ -21,6 +21,9 @@ namespace ProjetoIntegracao.Models
             public int Telefone { get; set; }
         }
 
+        //Alterar caminho para o "Banco de Dados" em txt da sua máquina, localizado na pasta "bd".
+        private const string DIRETORIO_BD = @"{Diretório do projeto}\bd\clientes.txt";
+
         public static Cliente.Retorno Inserir(Cliente.Retorno Retorno)
         {
 
@@ -33,8 +36,7 @@ namespace ProjetoIntegracao.Models
             {
                 clienteString = JsonConvert.SerializeObject(Retorno);
 
-                //Alterar caminho para o "Banco de Dados" em txt
-                currentCliente = File.ReadAllText("caminho do txt na sua maquina");
+                currentCliente = File.ReadAllText(DIRETORIO_BD);
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(currentCliente);
 
@@ -43,16 +45,14 @@ namespace ProjetoIntegracao.Models
                     currentCliente += "[";
                     string clientesAtualizados = currentCliente + clienteString + "]";
 
-                    //Alterar caminho para o "Banco de Dados" em txt
-                    File.WriteAllText("caminho do txt na sua maquina", clientesAtualizados);
+                    File.WriteAllText(DIRETORIO_BD, clientesAtualizados);
                 }
                 else
                 {
                     string formatarJsonCol = currentCliente.Replace("]", "");
                     string clientesAtualizados = formatarJsonCol + "," + clienteString + "]";
 
-                    //Alterar caminho para o "Banco de Dados" em txt
-                    File.WriteAllText("caminho do txt na sua maquina", clientesAtualizados);
+                    File.WriteAllText(DIRETORIO_BD, clientesAtualizados);
                 }
                 cliente = JsonConvert.DeserializeObject<Cliente.Retorno>(clienteString);
             }
@@ -71,7 +71,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesString = File.ReadAllText("caminho do txt na sua maquina");
+                clientesString = File.ReadAllText(DIRETORIO_BD);
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesString);
 
@@ -100,7 +100,7 @@ namespace ProjetoIntegracao.Models
             string clientesString = string.Empty;
             List<Cliente.Retorno> listaClientes = new List<Cliente.Retorno>();
 
-            clientesString = File.ReadAllText("caminho do txt na sua maquina");
+            clientesString = File.ReadAllText(DIRETORIO_BD);
 
             listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesString);
 
@@ -114,7 +114,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesJson = File.ReadAllText("caminho do txt na sua maquina");
+                clientesJson = File.ReadAllText(DIRETORIO_BD);
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesJson);
 
@@ -124,7 +124,7 @@ namespace ProjetoIntegracao.Models
 
                 listaClientesString = JsonConvert.SerializeObject(listaClientes);
 
-                File.WriteAllText("caminho do txt na sua maquina", listaClientesString);
+                File.WriteAllText(DIRETORIO_BD, listaClientesString);
             }
             catch (Exception e)
             {
@@ -142,7 +142,7 @@ namespace ProjetoIntegracao.Models
 
             try
             {
-                clientesJson = File.ReadAllText("caminho do txt na sua maquina");
+                clientesJson = File.ReadAllText(DIRETORIO_BD);
 
                 listaClientes = JsonConvert.DeserializeObject<List<Cliente.Retorno>>(clientesJson);
 
@@ -152,11 +152,11 @@ namespace ProjetoIntegracao.Models
 
                 if (listaClientes.Count == 0)
                 {
-                    File.WriteAllText("caminho do txt na sua maquina", "");
+                    File.WriteAllText(DIRETORIO_BD, "");
                 }
                 else
                 {
-                    File.WriteAllText("caminho do txt na sua maquina", listaClientesString);
+                    File.WriteAllText(DIRETORIO_BD, listaClientesString);
                 }
             }
             catch (Exception e)
