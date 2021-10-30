@@ -26,7 +26,7 @@ Acesse o site https://crudcrud.com e seu endpoint já estará criado e pronto pa
 
 ### Pontos a se destacar
 
-O endpoint tem duração de 24hrs para testes, podendo fazer 200 requests.
+O endpoint tem duração de 24 horas para testes, podendo fazer 100 requests.
 
 ![01](https://user-images.githubusercontent.com/74942532/139539616-aaec25ed-c4d7-4ecd-ac78-07a7a6d42ad6.png)
 
