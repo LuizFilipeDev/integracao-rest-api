@@ -9,7 +9,7 @@ utilizando a entidade cliente com um banco de dados local em txt para testes.
 Tela com a lista de clientes cadastrados
 ![02](https://user-images.githubusercontent.com/74942532/139539417-305f1b4f-db41-4a24-aa3a-a268edba6e25.png)
 
-Tela de cadastro de clientes
+Tela de cadastro e alteração dos dados do clientes
 ![003](https://user-images.githubusercontent.com/74942532/139539433-ee4aaf6e-b545-45ba-9eff-73edac35e33e.png)
 
 ## Quais são as funções?
