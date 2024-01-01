@@ -1,51 +1,51 @@
 
-# Integração API REST
+# integration API REST
 
-Aplicação desenvolvida em ASP.NET com padrão MVC com o intuito de desenvolver endpoints para realizar um CRUD com uma API REST gratuita,
-utilizando a entidade cliente com um banco de dados local em txt para testes.
+Application developed in ASP.NET with MVC standard with the aim of developing endpoints to perform a CRUD with a free REST API,
+using the client entity with a local database in txt for testing.
 
 ## Interface
 
-Tela com a lista de clientes cadastrados
+Screen with the list of registered customers
 ![02](https://user-images.githubusercontent.com/74942532/139539417-305f1b4f-db41-4a24-aa3a-a268edba6e25.png)
 
-Tela de cadastro e alteração dos dados dos clientes
+Screen for registering and changing customer data
 ![003](https://user-images.githubusercontent.com/74942532/139539433-ee4aaf6e-b545-45ba-9eff-73edac35e33e.png)
 
-## Quais são as funções?
+## What are the functions?
 
-Fazer um CRUD com a API `crudcrud` e salvar as informações em um banco de dados local em txt.
+Perform a CRUD with the `crudcrud` API and save the information in a local database in txt.
 
 ## API REST
 
-### Como criar um endpoint na API
+### How to create an API endpoint
 
-Acesse o site https://crudcrud.com e seu endpoint já estará criado e pronto para uso.
+Access the website https://crudcrud.com and your endpoint will be created and ready to use.
 
 ![001](https://user-images.githubusercontent.com/74942532/139539612-2ec720cd-b857-4cb3-83fa-3d7728c9a38d.png)
 
-### Pontos a se destacar
+### Points to highlight
 
-O endpoint tem duração de 24 horas para testes, podendo fazer 100 requests.
+The endpoint lasts 24 hours for testing, and can make 100 requests.
 
 ![01](https://user-images.githubusercontent.com/74942532/139539616-aaec25ed-c4d7-4ecd-ac78-07a7a6d42ad6.png)
 
-## Antes de rodar o projeto
+## Before running the project
 
-Alterar as constantes dentro dos arquivos:
+Change constants within files:
 
 #### `/Models/Cliente.cs`
-constante: "DIRETORIO_BD", com o diretório completo até o arquivo txt
+constant: "DIRETORIO_BD", with the complete directory up to the txt file
 
 #### `/HUB/Integracao.cs`
-constante: "ENDPOINT", com o id criado no site https://crudcrud.com
+constant: "ENDPOINT", with the id created on the website https://crudcrud.com
 
-logo após as alterações, tudo pronto para executar o projeto.
+Right after the changes, everything is ready to execute the project.
 
-#### Observação
+#### Observation
 
-Dentro dos respectivos arquivos tem toda informação para alterar o que for necessário para o funcionamento.
+Within the respective files there is all the information to change whatever is necessary for operation.
 
-## Sobre
+## About
 
-Integração desenvolvida utilizando as seguintes tecnologias: Visual Studio (ASP.NET), Bootstrap e Newtonsoft (Json).
+Integration developed using the following technologies: Visual Studio (ASP.NET), Bootstrap and Newtonsoft (Json).
