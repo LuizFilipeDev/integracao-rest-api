@@ -1,5 +1,5 @@
 
-# integration API REST
+# Integration API REST
 
 Application developed in ASP.NET with MVC standard with the aim of developing endpoints to perform a CRUD with a free REST API,
 using the client entity with a local database in txt for testing.
